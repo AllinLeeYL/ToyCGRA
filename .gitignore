@@ -1,6 +1,2 @@
-*
-!.gitignore
-!README.md
-!LICENSE
-!simulator/**.py
-!test/**.yml
+**__pycache__*
+*.log

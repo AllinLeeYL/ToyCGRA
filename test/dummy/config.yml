@@ -1,0 +1,3 @@
+pe_row_size: 2
+pe_col_size: 2
+scratchpad_mem_size: 8192 # 2**13

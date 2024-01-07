@@ -1,0 +1,8 @@
+- - - 1, NONE, ADD, I
+    - 2, NONE, ADD, I
+  - - 3, NONE, ADD, I
+    - 4, NONE, ADD, I
+- - - EAST, SOUTH, ADD, R
+    - WEST, SOUTH, MUL, R
+  - - IDLE
+    - IDLE
