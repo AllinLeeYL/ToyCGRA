@@ -1,5 +1,5 @@
 import helper
-import logger
+from logger import logger as log
 
 class PE():
     def __init__(self) -> None:
@@ -30,6 +30,7 @@ class SimplePE(PE):
     def __init__(self) -> None:
         """
         Simple PE without config memory.
+        Each PE can execute Load/Store and ALU instruction.
         """
         self.reg = 0 # storing the value to be written into the regfile
         self.lastCycleReg = 0 # storing last cycle's regfile value
@@ -155,7 +156,7 @@ class SimplePEArray:
                  rowSize: int,
                  colSize: int) -> None:
         """
-        Simple PE array.
+        Simple PE array. Every PE is the same.
         :param rowSize: row size of PE array
         :param colSize: column size of PE array
         """
@@ -191,9 +192,9 @@ class SimplePEArray:
         string = ''
         for i in range(self.rowSize):
             string += '--'
-        logger.logger.debug(string)
+        log.debug(string)
         for i in range(self.rowSize):
             string = ''
             for j in range(self.colSize):
                 string += str(self.PEArray[i][j].get_val()) + ' '
-            logger.logger.debug(string)
+            log.debug(string)

@@ -12,14 +12,16 @@ def parse_argument():
     parser.add_argument('--scratchpad_mem_size', type=int, default=2**13,
                         help='*scratchpad memory size.')
     # TODO: design space exploration
-    parser.add_argument('--search_args', type=str, default=None,
-                        help='searchable design arguments, can be \"pe_row_size,pe_col_size,cfg_mem_size\"')
+    # parser.add_argument('--search_args', type=str, default=None,
+    #                     help='searchable design arguments, can be \"pe_row_size,pe_col_size,cfg_mem_size\"')
     # path
-    parser.add_argument('--exedir', type=str, default='test/dummy')
+    parser.add_argument('--exedir', type=str, default='test/dummy',
+                        help='the directory where PE instructions locate.')
     # logging
-    parser.add_argument('--log_fname', type=str, default='sim.log')
+    parser.add_argument('--log_fname', type=str, default='sim.log',
+                        help='where the log file is stored.')
     parser.add_argument('--log_level', type=int, default=logging.DEBUG,
-                        help='debug true: print every cycle\'s PE state to log file')
+                        help='logging level (int): CRITICAL = 50, ERROR = 40, WARNING = 30, INFO = 20, DEBUG = 10, NOTSET = 0')
     args = parser.parse_args()
     return args
 
